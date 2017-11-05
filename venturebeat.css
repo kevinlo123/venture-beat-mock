@@ -1,0 +1,389 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 10px;
+     line-height: 1.4;
+     font-family: 'Droid Sans', sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+	width: 960px;
+	margin: auto;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+header{
+  height: 70px;
+  background-color: black;
+}
+
+header + section{
+  height: 700px;
+  background: url(https://venturebeat.com/wp-content/uploads/2017/01/Ellen-Pao.jpg?fit=2048%2C1365&strip=all);
+  background-size: cover;
+  border:1px solid black;
+}
+
+header + section > section{
+   height: 100px;
+   width: 40%;
+   background-color: white;
+   opacity: .8;
+   margin: 506px 20px 20px 233px;
+}
+
+section + section{
+  height: 220px;
+}
+
+section + section > section{
+    height: 158px;
+    width: 45%;
+    margin: 25px 20px 20px 172px;
+}
+
+/****************************
+header styles section**************/
+
+header > img + nav > ul  li a{
+  color: grey;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+header > img + nav > ul  li{
+  display: inline-block;
+  margin: 20px 20px 20px 20px;
+}
+
+header > img + nav > ul{
+  margin-left: 20px;
+  margin-left: 39%;
+  display: block;
+  margin-top: -70px;
+}
+
+header > nav + nav > ul li{
+  display: inline-block;
+  margin: 20px 20px 20px 20px;
+}
+
+header > nav + nav > ul li a{
+  color: grey;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+header > nav + nav > ul{
+  margin-left: 20px;
+  margin-left: 70%;
+  display: block;
+  margin-top: -70px;
+}
+
+.fa-search{
+  color: grey
+}
+
+.ventureLogo{
+    margin: 19px 20px 20px 200px;
+    height: 34px;
+    width: 5%;
+}
+
+/****************************
+section 1 styles section**************/
+
+
+header + section > section > h1{
+  font-size: 2.5em;
+  margin: 20px 20px 20px 20px;
+  padding-top: 17px;
+  line-height: 29.5px;
+}
+
+/***************************
+bottom section*************/
+div{
+  width: 40%;
+  border-top: 1px solid lightgrey;
+  margin-left: 170px;
+}
+.buffy{
+  height: 157px;
+  width: 42%;
+  float: left;
+  margin-right: 10px;
+}
+
+.buffyText{
+  font-size: 2em;
+  margin: -6px 30px 14px 20px;
+}
+
+.berenice{
+  color: #0073bb;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.date{
+  font-size: 1em;
+  color: grey;
+
+}
+/****************
+media queries***/
+
+@media (min-width : 678px) and (max-width : 920px){
+
+  header{
+    height: 500px;
+    background-color: black;
+  }
+  header > img + nav > ul  li a{
+    color: grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+
+  header > img + nav > ul  li{
+    display: block;
+    margin: 20px 20px 20px 20px;
+  }
+
+  header > img + nav > ul{
+    margin-left: 20px;
+    margin-left: 35%;
+    display: block;
+    margin-top: -33px;
+  }
+
+  header > nav + nav > ul li{
+    display: block;
+    margin: 20px 20px 20px 20px;
+  }
+
+  header > nav + nav > ul li a{
+    color: grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+  }
+
+  header > nav + nav > ul{
+    margin-left: 20px;
+    margin-left: 35%;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .fa-search:before {
+     content: "\f002";
+     display: none;
+  }
+
+  .ventureLogo{
+    margin: 19px 20px 20px 269px;
+    height: 224px;
+    width: 32%;
+  }
+
+  header + section > section{
+     height: 100px;
+     width: 70%;
+     background-color: white;
+     opacity: .8;
+     margin: 506px 20px 20px 120px;
+  }
+  section + section > section{
+      height: 158px;
+      width: 72%;
+      margin: 25px 20px 20px 72px;
+  }
+}
+
+@media (min-width : 378px) and (max-width : 678px){
+
+  header{
+    height: 138px;
+    background-color: black;
+  }
+
+.ventureLogo {
+  margin: 19px 20px 20px 12px!important;
+  height: 47px;
+  width: 19%;
+}
+
+header > img + nav > ul  li a{
+color: white;
+}
+
+header > img + nav > ul  li{
+ margin: 1% 1% 1% 10%;
+}
+
+header > img + nav > ul{
+  margin:-5% 0% 14% -6%;
+  display: none;
+}
+
+header > nav + nav > ul li{
+  margin: 0% 0% 0% 10%;
+}
+
+header > nav + nav > ul li a{
+  color: red;
+  position: relative;
+  right: 55%;
+  display: block;
+  bottom: 35px;
+}
+
+
+header > nav + nav > ul{
+  margin: 9% 23% 9% 30%;
+  display: none;
+}
+
+#hamburger{
+  position: absolute;
+  left: 77%;
+  top: 5%;
+  height: 6%;
+  border: 1px solid white;
+  width: 11%;
+  background:white;
+  border-radius: 3px;
+}
+
+#hamburger-bar{
+  background: red;
+  height: 19%;
+  display: block;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  top: 9%;
+}
+
+#hamburger-barTwo{
+  background: red;
+  height: 19%;
+  display: block;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  top: 21%;
+}
+
+#hamburger-barThree{
+  background: red;
+  height: 19%;
+  display: block;
+  width: 80%;
+  position: relative;
+  left: 10%;
+  top: 31%;
+}
+
+
+.fa-search:before {
+   content: "\f002";
+   display: none;
+}
+
+header + section{
+  height: 420px;
+  background: url(https://venturebeat.com/wp-content/uploads/2017/01/Ellen-Pao.jpg?fit=2048%2C1365&strip=all);
+  background-size: cover;
+  border:1px solid black;
+}
+
+header + section > section{
+   height: 115px;
+   width: 70%;
+   background-color: white;
+   opacity: .8;
+   margin: 260px 20px 20px 66px;
+}
+
+header + section > section > h1 {
+    font-size: 2em;
+    margin: 20px 20px 20px 20px;
+    padding-top: 17px;
+    line-height: 29.5px;
+}
+
+section + section > section{
+    height: 158px;
+    width: 80%;
+    margin: 25px 20px 20px 32px;
+}
+
+.buffy {
+    height: 191px;
+    width: 87%;
+    float: none;
+    margin-left: 24px;
+}
+
+div{
+  display: none;
+}
+
+}
